@@ -290,6 +290,13 @@ var auditTask = function(taskEl) {
   }
 };
 
+// schedule task auditing
+setInterval(function() {
+  $(".card .list-group-item").each(function(index, el) {
+    auditTask(el);
+  });
+}, 1800000);
+
 // load tasks for the first time
 loadTasks();
 
